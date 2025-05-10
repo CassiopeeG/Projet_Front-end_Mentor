@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+<main class="conteneur rangee">
+  <section class="cols_8_de_12">
+
+    <h1>Desserts</h1>
+
+    <ul class="section_items">
+      <li class="item" id="0">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-waffle-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-waffle-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-waffle-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-waffle-thumbnail.jpg" alt="Waffle">
+          </picture>
+        </div>
+
+          <div class="ajouter-panier ajouter">
+            <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+            <h4>Add to Cart</h4>
+          </div>
+  
+          <div class="ajouter-panier choisi hidden">
+            <svg class="soustraire" alt="Reduce quantity" xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none" viewBox="0 0 10 2"><path fill="currentColor" d="M0 .375h10v1.25H0V.375Z"/></svg>
+            <h4 id="quantite-item">1</h4>
+            <svg class="additionner" alt="Increase quantity" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="currentColor" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg>
+          </div>
+        
+        <p id="categorie">Waffle</p>
+        <h3 id="nom">Waffle with Berries</h3>
+        <h3 id="prix" class="red">$6.50</h3>
+      </li>
+
+      <li class="item" id="1">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-creme-brulee-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-creme-brulee-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-creme-brulee-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-creme-brulee-thumbnail.jpg" alt="Creme Brulee">
+          </picture>
+        </div>
+
+          <div class="ajouter-panier">
+            <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+            <h4>Add to Cart</h4>
+          </div>
+  
+          <div class="ajouter-panier-choisi hidden">
+            <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+            <h4>Add to Cart</h4>
+          </div>
+        
+        <p id="categorie">Crème Brûlée</p>
+        <h3 id="nom">Vanilla Bean Crème Brûlée</h3>
+        <h3 id="prix" class="red">$7.00</h3>
+      </li>
+
+      <li class="item" id="2">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-macaron-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-macaron-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-macaron-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-macaron-thumbnail.jpg" alt="Macaron">
+          </picture>
+        </div>
+
+          <div class="ajouter-panier">
+            <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+            <h4>Add to Cart</h4>
+          </div>
+  
+          <div class="ajouter-panier-choisi hidden">
+            <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+            <h4>Add to Cart</h4>
+          </div>
+        
+        <p id="categorie">Macaron</p>
+        <h3 id="nom">Macaron Mix of Five</h3>
+        <h3 id="prix" class="red">$8.00</h3>
+      </li>
+
+      <li class="item" id="3">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-tiramisu-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-tiramisu-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-tiramisu-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-tiramisu-thumbnail.jpg" alt="Tiramisu">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Tiramisu</p>
+        <h3 id="nom">Classic Tiramisue</h3>
+        <h3 id="prix" class="red">$5.50</h3>
+      </li>
+
+      <li class="item" id="4">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-baklava-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-baklava-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-baklava-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-baklava-thumbnail.jpg" alt="Baklava">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Baklava</p>
+        <h3 id="nom">Pistachio Baklava</h3>
+        <h3 id="prix" class="red">$4.00</h3>
+      </li>
+
+      <li class="item" id="5">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-meringue-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-meringue-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-meringue-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-meringue-thumbnail.jpg" alt="Lemon Meringue Pie">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Pie</p>
+        <h3 id="nom">Lemon Meringue Pie</h3>
+        <h3 id="prix" class="red">$5.00</h3>
+      </li>      
+
+      <li class="item" id="6">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-cake-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-cake-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-cake-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-cake-thumbnail.jpg" alt="Red Velvet Cake">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Cake</p>
+        <h3 id="nom">Red Velvet Cake</h3>
+        <h3 id="prix" class="red">$4.50</h3>
+      </li>      
+
+      <li class="item" id="7">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-brownie-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-brownie-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-brownie-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-brownie-thumbnail.jpg" alt="Brownie">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Brownie</p>
+        <h3 id="nom">Salted Caramel Brownie</h3>
+        <h3 id="prix" class="red">$4.50</h3>
+      </li>     
+
+      <li class="item" id="8">
+        <div class="image-dessert">
+          <picture>
+            <!-- Mobile -->
+            <source media = "(max-width: 399px)"
+            srcset= "assets/images/image-panna-cotta-mobile.jpg">
+            <!-- Tablette -->
+            <source media = "(max-width: 800px)"
+            srcset= "assets/images/image-panna-cotta-tablet.jpg">
+            <!-- Table -->
+            <source media = "(min-width: 800px)"
+            srcset= "assets/images/image-panna-cotta-desktop.jpg">
+            <!-- Img -->
+            <img src="assets/images/image-panna-cotta-thumbnail.jpg" alt="Panna Cotta">
+          </picture>
+        </div>
+
+        <div class="ajouter-panier">
+          <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart">
+          <h4>Add to Cart</h4>
+        </div>
+        
+        <p id="categorie">Panna Cotta</p>
+        <h3 id="nom">Vanilla Panna Cotta</h3>
+        <h3 id="prix" class="red">$6.50</h3>
+      </li>     
+    </ul>
+  </section>
+
+  <section class="cols_4_de_12">
+    <div class="zone_panier">
+      <h2 class="red">Your Cart (<span id="nbr_items">0</span>)</h2>
+
+        <img src="assets/images/illustration-empty-cart.svg" alt="Empty Cart">
+        <p>Your added items will appear here</p>
+
+    </div>
+    
+  </section>
+</main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+</body>
+
+</html>

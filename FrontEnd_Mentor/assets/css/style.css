@@ -1,0 +1,144 @@
+@import url(grille.css);
+@import url(typo.css);
+
+/* VARIABLES */
+/* -------------------------------------------------------------------------> */
+:root{
+    --rouge: #C73B0F;
+    --noir: #260F08;
+    --brun-foncé: #87635A;
+    --brun-pale: #AD8A85;
+    --beige: #F5EEEC;
+    --beige-pale: #FCF8F6;
+    --blanc: #FFFFFF;
+    --vert: #1EA575;
+}
+
+/* BODY*/
+/* -------------------------------------------------------------------------> */
+body{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+/* COULEURS */
+/* -------------------------------------------------------------------------> */
+.red{
+    color: var(--rouge);
+}
+
+p{
+    color: var(--brun-pale);
+}
+
+/* FLEX */
+/* -------------------------------------------------------------------------> */
+.section_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.item{
+    max-width: 90%;
+}
+
+@media(min-width:400px){
+    .item{
+        max-width: 48%;
+    }
+}
+
+@media(min-width:700px){
+    .item{
+        max-width: 32%;
+    }
+}
+
+@media(min-width: 800px){
+    .item{
+        flex-basis: 80%;
+    }
+}
+
+/* IMAGES DESSERT */
+/* -------------------------------------------------------------------------> */
+
+.image-dessert{
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.image-dessert img {
+    width: 100%;
+    height: auto;
+}
+
+/* PANIER */
+/* -------------------------------------------------------------------------> */
+.zone_panier{
+    background-color: var(--blanc);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.panier_vide img{
+    margin: 0 auto;
+    background-color: #1EA575;
+}
+
+/* BOUTONS "Add to cart" */
+/* -------------------------------------------------------------------------> */
+
+.ajouter-panier{
+    border-radius: 5rem;
+    overflow: hidden;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    border: var(--rouge) solid 1px;
+    margin: -1rem auto;
+    position: relative;
+    top: -5%;
+}
+
+.ajouter{
+    background-color: var(--beige-pale);
+}
+
+.ajouter:hover{
+    color: var(--rouge);
+}
+
+.choisi{
+    background-color: var(--rouge);
+    color: var(--blanc);
+}
+
+.choisi svg{
+    border-radius: 50%;
+    overflow: hidden;
+    border: var(--blanc) solid 1px;
+
+    height: 10px;
+    width: 10px;
+    margin-top: 2.5rem;
+    padding: 5px;
+}
+
+.choisi svg:hover{
+    background-color: var(--blanc);
+    color : var(--rouge);
+}
+
+/* UTILITAIRE */
+/* -------------------------------------------------------------------------> */
+.hidden{
+    display: none;
+}
+
+
