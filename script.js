@@ -2,6 +2,11 @@
 const arrAjouterPaniers = document.querySelectorAll(".ajouter")
 const arrPaniersChoisis = document.querySelectorAll(".choisi") //valider que encore utile
 const arrBoutonsQuantite = document.querySelectorAll(".choisi svg") 
+//Variables pour le panier
+const arrItems = document.querySelectorAll(".item")
+const arrQuantiteItems = document.querySelectorAll(".item > .choisi > h4")
+const arrNomItems = document.querySelectorAll(".item > .nom")
+const arrPrixItems = document.querySelectorAll(".item > .prix")
 
 // Écouteurs d'événements
 for(i = 0; i < arrAjouterPaniers.length; i++){
@@ -50,14 +55,32 @@ function  modifierQuantite(e){
     if(intQuantite <= 0){
         afficherAjouterPanier(panierActif)
         refAffichageQuantite.innerHTML = 0
+        
     }
-    else{ //Sinon afficher le nombre d'item dans le panier
-        ajouterItemAuPanier(intQuantite, panierActif.closest(".item").id)
-    }
+
+    //Afficher le nombre d'item dans le panier
+    afficherItemAuPanier()
 }
 
-function  ajouterItemAuPanier(intQuantite, idItem){
-    console.log(intQuantite + ", " + idItem)
+function  afficherItemAuPanier(){
 
-    
+    for(i = 0; i < arrItems.length; i++){
+        let intQuantité = parseInt(arrQuantiteItems[i].innerHTML)
+        let strNom = arrNomItems[i].innerHTML
+        //ENLEVER LE $ au début du string
+        let strPrix = arrPrixItems[i].innerHTML
+        let intPrix = parseFloat(strPrix.slice(1))
+
+        console.log(intQuantité + ", " + strNom + ", " + intPrix)
+
+        // if()
+        // arrItems[i]
+    }
+
+
+    let refPanierVide = document.getElementById("panier-vide")
+    refPanierVide.classList.add("hidden")
+
+
+
 }

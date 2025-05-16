@@ -48,9 +48,9 @@
             <svg class="additionner" alt="Increase quantity" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="currentColor" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg>
           </div>
         
-        <p id="categorie">Waffle</p>
-        <h3 id="nom">Waffle with Berries</h3>
-        <h3 id="prix" class="red">$6.50</h3>
+        <p>Waffle</p>
+        <h3 class="nom">Waffle with Berries</h3>
+        <h3 class="red prix">$6.50</h3>
       </li>
 
       <li class="item" id="1">
@@ -81,9 +81,9 @@
           <svg class="additionner" alt="Increase quantity" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10"><path fill="currentColor" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/></svg>
         </div>
         
-        <p id="categorie">Crème Brûlée</p>
-        <h3 id="nom">Vanilla Bean Crème Brûlée</h3>
-        <h3 id="prix" class="red">$7.00</h3>
+        <p>Crème Brûlée</p>
+        <h3 class="nom">Vanilla Bean Crème Brûlée</h3>
+        <h3 class="red prix">$7.00</h3>        
       </li>
 
       <li class="item" id="2">
@@ -323,8 +323,14 @@
     <div class="zone_panier">
       <h2 class="red">Your Cart (<span id="nbr_items">0</span>)</h2>
 
+      <div id="panier-vide">
         <img src="assets/images/illustration-empty-cart.svg" alt="Empty Cart">
         <p>Your added items will appear here</p>
+      </div>
+
+      <ul id="panier-plein">
+
+      </ul>
 
     </div>
     
